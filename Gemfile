@@ -7,6 +7,8 @@ gem 'rails', '4.1.8'
 gem 'sqlite3', group: [:development, :test]
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+# Use BootStrap for styles
+gem 'bootstrap-sass', '~> 3.3.1'
 # Use postgreSQL for db production
 group :production do
   gem 'pg'
