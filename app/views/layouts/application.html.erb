@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RoRSaas</title>
+  <title>Cloud Games</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -21,7 +21,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to 'SaaS', root_path, class: 'navbar-brand' %>
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <i class="fa fa-users"></i>
+          Clames
+        <% end %>
       </div>
 
       <div class="collapse navbar-collapse" id="main-nav-collapse">
