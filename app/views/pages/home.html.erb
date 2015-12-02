@@ -1,4 +1,24 @@
+<%= video_tag(["gameVid.webm", "gameVid.mp4"], autoplay: true, poster: "black.jpg", class: "bgvid") %>
+
+<br />
+<br />
+<br />
+<br />
 <div class="jumbotron text-center">
   <h1>Home of Gaming</h1>
   <h3>Cloud-Gaming for the fnatics</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h2 class="text-center">Basic Memebership</h2>
+    <h4>Sign Up to Game to your hearts content</h4>
+    <br />
+    <%= link_to "Sign up FREE", new_user_registration_path, class: "btn btn-default btn-lg btn-block" %>
+  </div>
+  <div class="col-md-6">
+    <h2 class="text-center">Pro Membership</h2>
+    <h4>Sign Up to Game to your hearts content and hosts your own main profile and content</h4>
+    <%= link_to "Sign up @ £10/m", new_user_registration_path, class: "btn btn-default btn-lg btn-block" %>
+  </div>
 </div>
