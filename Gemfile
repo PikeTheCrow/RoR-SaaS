@@ -16,8 +16,10 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -35,6 +37,12 @@ gem 'spring', group: :development
 
 # Use devise for profile creation
 gem 'devise', '~> 3.4.1'
+
+# Use Stirpe to handle payments securly
+gem 'stripe', '~> 1.16.1'
+
+# Use Figaro to keep content secret
+gem 'figaro', '~> 1.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
