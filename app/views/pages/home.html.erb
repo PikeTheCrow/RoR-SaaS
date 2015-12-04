@@ -1,5 +1,7 @@
 <!-- <%= video_tag(["gameVid.webm", "gameVid.mp4"], autoplay: true, poster: "black.jpg", class: "bgvid") %> -->
 
+<%= link_to "Create Profile", new_user_profile_path(current_user) if current_user %>
+
 <br />
 <br />
 <br />
