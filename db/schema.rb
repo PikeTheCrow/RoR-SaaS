@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20151204114450) do
     t.string   "last_name"
     t.string   "job_title"
     t.string   "phone_number"
-    t.string   "contract_email"
+    t.string   "contact_email"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
