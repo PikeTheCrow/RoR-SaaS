@@ -1,7 +1,5 @@
 <!-- <%= video_tag(["gameVid.webm", "gameVid.mp4"], autoplay: true, poster: "black.jpg", class: "bgvid") %> -->
 
-<%= link_to "Create Profile", new_user_profile_path(current_user) if current_user %>
-
 <br />
 <br />
 <br />
@@ -12,15 +10,39 @@
 </div>
 
 <div class="row">
-  <div class="col-md-6">
-    <h2 class="text-center">Basic Memebership</h2>
-    <h4>Sign Up to Game to your hearts content</h4>
-    <br />
-    <%= link_to "Sign up FREE", new_user_registration_path(plan: @basic_plan.id), class: "btn btn-default btn-lg btn-block" %>
-  </div>
-  <div class="col-md-6">
-    <h2 class="text-center">Pro Membership</h2>
-    <h4>Sign Up to Game to your hearts content and hosts your own main profile and content</h4>
-    <%= link_to "Sign up @ £10/m", new_user_registration_path(plan: @pro_plan.id), class: "btn btn-default btn-lg btn-block" %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="col-md-6">
+      <div class="well">
+        <% if current_user.profile %>
+          <h1 class="text-center">Your Profile</h1><br />
+            <%= link_to "Edit the Gaming Legend", "#", class: "btn btn-default btn-lg btn-block" %><br />
+            <%= link_to "View the Gamer", user_path(current_user), class: "btn btn-default btn-lg btn-block" %><br />
+            <%= link_to "Go Get Gaming", "#", class: "btn btn-default btn-lg btn-block"  %>
+        <% else %>
+          <%= link_to "Create Profile", new_user_profile_path(current_user) if current_user %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="well">
+        <h1 class="text-center">The Community</h1><br />
+        <p>Chat, share, connect with fellow Cloud Gamers, Streamers, Developers and Creators</p>
+        <%= link_to "Visit the Community", "#", class: "btn btn-default btn-lg btn-block" %>
+      </div>
+    </div>
+
+  <% else %>
+    <div class="col-md-6">
+      <h2 class="text-center">Basic Memebership</h2>
+      <h4>Sign Up to Game to your hearts content</h4>
+      <br />
+      <%= link_to "Sign up FREE", new_user_registration_path(plan: @basic_plan.id), class: "btn btn-default btn-lg btn-block" %>
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center">Pro Membership</h2>
+      <h4>Sign Up to Game to your hearts content and hosts your own main profile and content</h4>
+      <%= link_to "Sign up @ £10/m", new_user_registration_path(plan: @pro_plan.id), class: "btn btn-default btn-lg btn-block" %>
+    </div>
+  <% end %>
 </div>
