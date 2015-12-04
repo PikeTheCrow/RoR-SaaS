@@ -11,6 +11,8 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.1'
 # Use font-awesome for glyphicons and fonts
 gem 'font-awesome-sass', '~> 4.2.0'
+# Use paperclip for image uploading
+gem 'paperclip', '~> 4.2.1'
 # Use postgreSQL for db production
 group :production do
   gem 'pg'
