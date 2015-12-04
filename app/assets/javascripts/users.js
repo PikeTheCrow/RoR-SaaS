@@ -5,17 +5,13 @@ $(document).ready(function() {
     event.preventDefault();
     $('input[type=submit]').prop('disable', true);
     var error = false;
-    var ccNum = $('#card_number').val(),
-        cvcNum = $('#card_code').val(),
-        expMonth = $('#card_month').val(),
-        expYear = $('#card_year').val();
 
     if (!error) {
-      Stripe.createToken({
-        number: ccNum,
-        cvc: cvcNum,
-        exp_month: expMonth,
-        exp_year: expYear
+      Stripe.card.createToken({
+        number: $('#card_number').val(),
+        cvc: $('#card_code').val(),
+        exp_month: $('#card_month').val(),
+        exp_year: $('#card_year').val()
       }, stripeResponseHandler);
     }
     return false;
