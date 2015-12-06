@@ -9,6 +9,8 @@ gem 'sqlite3', group: [:development, :test]
 gem 'sass-rails', '~> 4.0.3'
 # Use BootStrap for styles
 gem 'bootstrap-sass', '~> 3.3.1'
+# Use autoprefixer for SCSS BootStrap
+gem 'autoprefixer-rails'
 # Use font-awesome for glyphicons and fonts
 gem 'font-awesome-sass', '~> 4.2.0'
 # Use paperclip for image uploading
