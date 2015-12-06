@@ -1,10 +1,70 @@
-<%= image_tag @user.profile.avatar.url, class: "profile-img" %><br />
-<%= @user.profile.first_name %> <%= @user.profile.last_name %><br />
-<%= @user.profile.job_title %><br />
+<div class="well center">
+  <%= image_tag @user.profile.avatar.url, class: "profile-img" %><br />
+</div>
 
-  <% if current_user.plan_id == 2 %>
-    <%= @user.profile.phone_number %><br />
-    <%= @user.profile.contact_email %><br />
-  <% end %>
+<!-- Presentation -->
+<div class="presentation-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 wow fadeInLeftBig">
+          <h1>Hi. I'm</h1> <%= @user.profile.first_name %> <%= @user.profile.last_name %>
+          <h3>and I am a</h3> <%= @user.profile.job_title %>
+          <% if current_user.plan_id == 2 %>
+            <p>Phone:</p> <%= @user.profile.phone_number %><br />
+            <p>Email:</p> <%= @user.profile.contact_email %><br />
+          <% end %>
+          <h4>A few things about me</h4>
+            <%= @user.profile.description %><br />
+        </div>
+      </div>
+  </div>
+</div>
 
-<%= @user.profile.description %><br />
+<!-- Services -->
+<div class="services-container">
+  <div class="container">
+      <div class="row">
+        <h2 class="text-center">My Gaming Selection</h2>
+          <div class="col-sm-3">
+              <div class="service wow fadeInUp">
+                  <div class="game-logo">
+                    <%= image_tag ("hl2.jpg"), class:"game-logo" %>
+                  </div>
+                  <h3>Half-Life 2</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
+                  <%= link_to "Game", "#", class: "btn btn-danger" %> <%= link_to "My Streams", "#", class: "btn btn-primary" %>
+              </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="service wow fadeInDown">
+                <div class="game-logo">
+                  <%= image_tag ("portal2.jpg"), class:"game-logo" %>
+                </div>
+                <h3>Portal 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
+                <%= link_to "Game", "#", class: "btn btn-danger" %>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="service wow fadeInUp">
+                <div class="game-logo">
+                  <%= image_tag ("gw2.jpg"), class:"game-logo" %>
+                </div>
+                <h3>Guild Wars 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
+                <%= link_to "Game", "#", class: "btn btn-danger" %>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="service wow fadeInDown">
+                <div class="game-logo">
+                  <%= image_tag ("talos.png"), class:"game-logo" %>
+                </div>
+                <h3>The Talos Principle</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
+                <%= link_to "Game", "#", class: "btn btn-danger" %> <%= link_to "My Streams", "#", class: "btn btn-primary" %>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

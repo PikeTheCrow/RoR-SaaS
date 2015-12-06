@@ -1,0 +1,211 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,300);
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.business-card {
+  position: relative;
+  width: 427px;
+  height: 320px;
+  margin: auto;
+  background-color: #2C3E50;
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0px 5px 25px 0px rgba(50, 50, 50, 0.4);
+  box-shadow: 0px 5px 25px 0px rgba(50, 50, 50, 0.4);
+}
+
+.hover {
+  margin-top: 5px;
+  font-family: 'Roboto Slab', sans-serif;
+  color: #646464;
+}
+
+.front {
+  width: 100%;
+  height: 100%;
+  background-color: #E74C3C;
+}
+
+.front img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rotate-left {
+  display: block;
+  position: absolute;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  color: #ECF0F1;
+  width: 300px;
+  height: 170px;
+  padding-left: 20px;
+  left: 20px;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  -webkit-transform: rotate(-90deg) translateX(-320px);
+  -moz-transform: rotate(-90deg) translateX(-320px);
+  -ms-transform: rotate(-90deg) translateX(-320px);
+  -o-transform: rotate(-90deg) translateX(-320px);
+  transform: rotate(-90deg) translateX(-320px);
+}
+
+.rotate-right {
+  display: block;
+  position: absolute;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  color: #ECF0F1;
+  width: 300px;
+  height: 170px;
+  padding-left: 20px;
+  left: -20px;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  -webkit-transform: rotate(90deg) translateY(-427px);
+  -moz-transform: rotate(90deg) translateY(-427px);
+  -ms-transform: rotate(90deg) translateY(-427px);
+  -o-transform: rotate(90deg) translateY(-427px);
+  transform: rotate(90deg) translateY(-427px);
+}
+
+.blue {
+  background-color: #2C3E50;
+  width: 50%;
+  height: 320px;
+}
+
+.back {
+  position: absolute;
+  display: block;
+  background-color: #2C3E50;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.back:hover {
+  opacity: 1;
+}
+
+.back h2 {
+  position: absolute;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 30px;
+  color: #E74C3C;
+  text-align: center;
+  padding-left: 38.5px;
+  width: 350px;
+  margin: auto;
+  top: 70px;
+}
+
+.back ul {
+  position: absolute;
+  display: block;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 25px;
+  color: #ECF0F1;
+  list-style: none;
+  padding-left: 38.5px;
+  bottom: 70px;
+}
+
+.back ul a {
+  color: #ECF0F1;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.back ul a:hover {
+  color: #E74C3C;
+}
+
+.info {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  color: #E74C3C;
+  cursor: pointer;
+}
+
+.info:hover {
+  color: #3498DB;
+}
+
+.close {
+  display: block;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  color: #E74C3C;
+  width: 100px;
+  padding-left: 30px;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+#overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  z-index: 20;
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 0px 5px 25px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px 5px 25px 0px rgba(50, 50, 50, 0.1);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#overlay p {
+  display: block;
+  padding-left: 30px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #2C3E50;
+}
+
+#overlay p a {
+  color: #E74C3C;
+  text-decoration: none;
+}
+
+#overlay p a:hover {
+  color: #3498DB;
+}
